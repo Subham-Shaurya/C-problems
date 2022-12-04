@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+//Non-Recursive Solution
+int factorial(int n)
+{
+	int i, fact = 1;
+	for(i = n; i > 1; i--)
+		fact = fact * i;
+	return fact;
+}
+//Recursive Solution 
+int rfactorial(int n)
+{
+	if(n == 0 || n==1)
+		return 1;
+	else
+		return n * rfactorial(n - 1);
+}
+int main(int n)
+{
+    printf("Enter a positive integer:");  //Here asking a value of n as input
+    scanf("%d",&n);
+    
+    //displaying the factorial of integerwhich given by user
+    printf("---Non-Recursive Solution---\n");
+    printf("Factorial %d!=%d ",n, factorial(n));  //using Non-Recursive logic
+    printf("\n---Recursive Solution---");
+    printf("\nFactorial %d! = %d",n , rfactorial(n));  //using Recursive logic
+    return 0;
+}
