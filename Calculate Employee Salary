@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+	char id[10];
+	int month;
+	double value, salary;
+	printf("Input the Employees ID(Max. 10 chars): ");
+	scanf("%s", &id);
+	printf("\nInput the working month: ");
+	scanf("%d", &month);
+	printf("\nSalary amount/hr: ");
+	scanf("%lf", &value);
+	salary = value * month;
+	printf("\nEmployees ID = %s\nSalary = ₹%.2lf\n", id,salary);
+	return 0;
+}
+
