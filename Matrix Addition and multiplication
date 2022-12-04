@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <math.h>
+void main()
+{
+  int m, n, small, large, arr[50];
+  printf ("Enter the no.of array elements:");
+  scanf ("%d", &n);
+  printf ("Enter the array elements:");
+  for (m = 0; m < n; ++m){
+    scanf("%d", &arr[m]);
+  }
+  large = small = arr[0];
+ 
+  for(m=1;m<n;++m)
+    {
+      if (arr[m] > large)
+	       large = arr[m];
+      if (arr[m] < small)
+	       small = arr[m];
+    }
+   printf ("The largest number is:%d\n", large);
+   printf("The smallest number is:%d\n",small);
+   
+
+/*Question (b)*/
+//To find sum of two matrices of order 2*2
+
+    int a[2][2], b[2][2]; 
+    int i,j; 
+    
+    //taking input using nested for loop for matrix A
+    printf("Enter elements of matrix A:\n"); 
+    for(i = 0; i<2; i++)  
+        for(j = 0; j<2; j++) {
+        printf("Enter a%d%d=",i+1,j+1);
+        scanf("%d",&a[i][j]); 
+        } 
+        
+    //taking input using nested for loop for matrix B
+    printf("Enter elements of matrix B:\n"); 
+    for(i =0; i<2; i++)  
+        for(j=0; j<2;j++) 
+        {
+            printf("Enter b%d%d=",i+1,j+1);
+            scanf("%d",&b[i][j]); 
+        } 
+        
+    //adding corresponding elements of arrays
+    printf("\n =====Matrix Addition=====\n"); 
+    for(i = 0; i<2; i++) { 
+        for(j = 0; j<2; j++) 
+            
+        //Displaying the sum of these two matrices
+        printf("%5d",a[i][j]+b[i][j]);
+        printf("\n");
+    }
+    
+    int x[2][2], y[2][2],result[2][2]; 
+    int p,q,k; 
+    printf("Enter elements of matrix A:\n"); 
+    for(p=0;p<2;p++) { 
+        for(q=0;q<2;q++)
+        scanf("%d",&x[p][q]); 
+    } 
+    printf("Enter elements of matrix B:\n"); 
+    for(p=0;p<2;p++) { 
+        for(q=0;q<2;q++)
+        
+        scanf("%d",&y[p][q]); 
+    } 
+    printf("\n =====Matrix Multiplication=====\n"); 
+    for(p=0;p<2;p++) { 
+        for(q=0;q<2;q++) { 
+            for(k=0;k<2;k++) 
+            result[p][q]=result[p][q]+x[p][k]*b[k][q];
+        } 
+    } 
+    for(p=0;p<2;p++) { 
+        for(q=0;q<2;q++) 
+
+        printf("%5d",result[p][q]); 
+        printf("\n");
+    }
+}
+
+
